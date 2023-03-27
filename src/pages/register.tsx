@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 import { Form } from '@/components/Form';
 
-export default function Login() {
+export default function Register() {
   return (
     <div className="flex min-h-screen">
-      <section className="w-1/2 bg-login-house bg-cover bg-center overflow-hidden" />
+      <section className="w-1/2 bg-register-house bg-cover bg-center overflow-hidden" />
 
       <section className="w-1/2 py-12 px-28 max-h-screen overflow-auto">
         <header className="mb-20">
@@ -19,13 +19,13 @@ export default function Login() {
 
         <div>
           <strong className="font-title text-4xl block mb-4">
-            Faça seu login
+            Crie sua conta
           </strong>
           <span className="text-gray-500 block max-w-xs mb-10">
-            Acesse sua conta para começar a busca pelo seu novo lar.
+            Registre-se para começar a busca pelo seu novo lar.
           </span>
 
-          <Form />
+          <Form isRegister />
         </div>
       </section>
     </div>
