@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between max-w-[1180px] mx-auto p-6">
+    <header className="flex items-center justify-between max-w-[1180px] mx-auto pt-6 px-6">
       <div className="flex items-center gap-8">
         <Image
           src="/logo.svg"
