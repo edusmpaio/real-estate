@@ -11,7 +11,10 @@ export function Form({ isRegister }: FormProps) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <form className="flex flex-col max-w-sm w-full">
+    <form
+      onSubmit={(e) => e.preventDefault()}
+      className="flex flex-col max-w-sm w-full"
+    >
       <label htmlFor="email" className="text-sm font-semibold mb-2">
         E-mail
       </label>
