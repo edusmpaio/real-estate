@@ -55,8 +55,8 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section className="flex flex-col items-center text-center max-w-3xl">
-          <h2 className="font-title text-gray-100 text-5xl mb-6">
+        <Section className="flex flex-col items-center text-center">
+          <h2 className="font-title text-gray-100 text-5xl mb-6 max-w-2xl">
             Ou procure pelo seu imóvel dos sonhos
           </h2>
           <p className="text-gray-300 mb-8 max-w-lg text-lg">
