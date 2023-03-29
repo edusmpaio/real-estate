@@ -53,7 +53,22 @@ export default function Home() {
           </div>
         </Section>
 
-        <div className="bg-gray-800 w-full h-full absolute top-80 -z-10" />
+        <Section className="flex flex-col items-center text-center max-w-3xl">
+          <h2 className="font-title text-gray-100 text-5xl mb-6">
+            Ou procure pelo seu imóvel dos sonhos
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-lg text-lg">
+            Navegue pela nossa lista de imóveis disponíveis e encontre o lar que
+            combina com você, seja para compra ou aluguel.
+          </p>
+          <a
+            href="#"
+            className="bg-gray-100 text-gray-800 py-3 px-6 font-medium hover:bg-white transition-colors text-lg"
+          >
+            Explorar imóveis
+          </a>
+        </Section>
+        <div className="bg-gray-800 w-full h-[82.7%] absolute top-80 -z-10" />
       </div>
     </>
   );
