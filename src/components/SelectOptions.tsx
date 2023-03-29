@@ -20,7 +20,7 @@ export function SelectOptions({ field }: SelectOptionProps) {
     <Listbox value={selectedOption} onChange={setSelectedOption}>
       {({ open }) => (
         <div className="relative">
-          <Listbox.Button className="w-[180px] flex justify-between items-center bg-gray-100 py-3 pl-4 pr-2 h-fit border border-gray-200">
+          <Listbox.Button className="min-w-[186px] w-fit flex justify-between items-center bg-gray-100 py-3 pl-4 pr-2 h-fit border border-gray-200">
             <div className={`flex items-center gap-3 text-sm text-gray-800`}>
               {icon}
               <span

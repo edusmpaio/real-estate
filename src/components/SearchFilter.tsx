@@ -46,7 +46,7 @@ export function SearchFilter() {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="absolute bottom-20 bg-white p-10 flex gap-6 shadow-md"
+      className="absolute bottom-28 bg-white p-10 flex gap-6 shadow-md"
     >
       {searchFilterFields.map((field) => (
         <SelectOptions key={field.id} field={field} />

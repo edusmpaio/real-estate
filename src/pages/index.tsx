@@ -25,8 +25,8 @@ export default function Home() {
         <Image
           src="/hero-photo.jpg"
           alt="Foto de uma casa moderna branca"
-          width={380}
-          height={570}
+          width={400}
+          height={600}
         />
       </Section>
     </>
