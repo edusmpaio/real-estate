@@ -1,10 +1,11 @@
 import Image from 'next/image';
 
-import { Header } from '@/components/Header';
-import { Section } from '@/components/Section';
+import { Header } from '@/components/layout/Header';
+import { Section } from '@/components/layout/Section';
+import { Footer } from '@/components/layout/Footer';
+
 import { SearchFilter } from '@/components/SearchFilter';
 import { Card } from '@/components/Card';
-import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
