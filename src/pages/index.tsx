@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Section } from '@/components/Section';
 import { SearchFilter } from '@/components/SearchFilter';
 import { Card } from '@/components/Card';
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -95,6 +96,8 @@ export default function Home() {
           </p>
         </div>
       </Section>
+
+      <Footer />
     </>
   );
 }
