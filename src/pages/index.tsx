@@ -70,6 +70,31 @@ export default function Home() {
         </Section>
         <div className="bg-gray-800 w-full h-[82.7%] absolute top-80 -z-10" />
       </div>
+
+      <Section className="mt-[280px] flex items-center gap-16">
+        <Image
+          src="/about-us-image.jpg"
+          alt="Homem e mulher na empresa sentados olhando para a tela de um notebook"
+          width={594}
+          height={457}
+        />
+        <div>
+          <h2 className="font-title text-4xl mb-6">Sobre a empresa</h2>
+          <p className="text-gray-500 mb-6">
+            A nossa equipe de especialistas é formada por agentes imobiliários
+            altamente qualificados, com um profundo conhecimento do mercado e
+            das últimas tendências em imóveis modernos. Estamos comprometidos em
+            ajudar nossos clientes a encontrar o imóvel perfeito para suas
+            necessidades, independentemente de seus requisitos.
+          </p>
+          <p className="text-gray-500">
+            Na nossa imobiliária, valorizamos a honestidade, a integridade e a
+            transparência em todas as nossas transações. Estamos sempre prontos
+            para ouvir as necessidades dos nossos clientes e trabalhar em
+            conjunto para alcançar seus objetivos.
+          </p>
+        </div>
+      </Section>
     </>
   );
 }
