@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Header } from '@/components/Header';
 import { Section } from '@/components/Section';
-import { SelectOptions } from '@/components/SelectOptions';
+import { SearchFilter } from '@/components/SearchFilter';
 
 export default function Home() {
   return (
@@ -19,16 +19,7 @@ export default function Home() {
             com a ajuda da nossa equipe especializada.
           </p>
 
-          <form className="absolute bottom-20 bg-white p-10 flex gap-6 shadow-md">
-            <SelectOptions placeholder="Tipo" />
-            <SelectOptions placeholder="Categoria" />
-            <SelectOptions placeholder="Cidade" />
-            <SelectOptions placeholder="Valor máximo" />
-
-            <button className="bg-gray-800 text-gray-100 py-3 px-6 font-medium hover:bg-gray-900 transition-colors text-sm">
-              Buscar
-            </button>
-          </form>
+          <SearchFilter />
         </div>
 
         <Image
