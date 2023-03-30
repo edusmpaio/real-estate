@@ -9,7 +9,7 @@ import { Header } from '@/components/layout/Header';
 import { Button } from '@/components/Button';
 
 import { Armchair, Bathtub, Bed, MapPin, Ruler } from '@phosphor-icons/react';
-import { ProposalForm } from './components/_ProposalForm';
+import ProposalForm from './components/_ProposalForm';
 
 interface ImmobileDetailsProps {
   currentImmobile: Immobile;

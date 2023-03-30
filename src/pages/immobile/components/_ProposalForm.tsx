@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button';
 
-export function ProposalForm() {
+export default function ProposalForm() {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="name" className="sr-only">
