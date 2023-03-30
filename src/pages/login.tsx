@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Form } from '@/components/Form';
 
@@ -9,12 +10,14 @@ export default function Login() {
 
       <section className="w-1/2 py-12 px-28 max-h-screen overflow-auto">
         <header className="mb-20">
-          <Image
-            src="/logo.svg"
-            width={94}
-            height={32}
-            alt="Logo escrito Brand"
-          />
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              width={94}
+              height={32}
+              alt="Logo escrito Brand"
+            />
+          </Link>
         </header>
 
         <div>
