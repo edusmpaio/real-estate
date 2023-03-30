@@ -1,4 +1,5 @@
-import { GetStaticPropsContext } from 'next';
+import { useRouter } from 'next/router';
+// import { GetStaticPropsContext } from 'next';
 import Image from 'next/image';
 
 import { immobileData, Immobile } from '@/data/immobile';
@@ -11,13 +12,20 @@ import { Button } from '@/components/Button';
 import { Armchair, Bathtub, Bed, MapPin, Ruler } from '@phosphor-icons/react';
 import ProposalForm from './components/_ProposalForm';
 
-interface ImmobileDetailsProps {
-  currentImmobile: Immobile;
-}
+// interface ImmobileDetailsProps {
+//   currentImmobile: Immobile;
+// }
 
-export default function ImmobileDetails({
-  currentImmobile,
-}: ImmobileDetailsProps) {
+export default function ImmobileDetails() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const currentImmobile = immobileData.find((immobile) => immobile.id === id);
+
+  if (!currentImmobile) {
+    return;
+  }
+
   const {
     title,
     image,
@@ -115,24 +123,24 @@ export default function ImmobileDetails({
 //   };
 // }
 
-export async function getServerSideProps(
-  context: GetStaticPropsContext<{ id: string }>
-) {
-  const id = context.params?.id;
+// export async function getServerSideProps(
+//   context: GetStaticPropsContext<{ id: string }>
+// ) {
+//   const id = context.params?.id;
 
-  const currentImmobile = immobileData.find((immobile) => immobile.id === id);
+//   const currentImmobile = immobileData.find((immobile) => immobile.id === id);
 
-  if (!currentImmobile) {
-    return {
-      redirect: {
-        destination: '/',
-      },
-    };
-  }
+//   if (!currentImmobile) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//       },
+//     };
+//   }
 
-  return {
-    props: {
-      currentImmobile,
-    },
-  };
-}
+//   return {
+//     props: {
+//       currentImmobile,
+//     },
+//   };
+// }
