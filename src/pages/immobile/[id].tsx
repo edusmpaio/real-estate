@@ -108,14 +108,14 @@ export default function ImmobileDetails({
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: 'blocking',
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [],
+//     fallback: 'blocking',
+//   };
+// }
 
-export async function getStaticProps(
+export async function getServerSideProps(
   context: GetStaticPropsContext<{ id: string }>
 ) {
   const id = context.params?.id;
