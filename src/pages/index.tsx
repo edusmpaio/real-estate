@@ -5,7 +5,7 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 
 import { SearchFilter } from '@/components/SearchFilter';
-import { Card } from '@/components/Card';
+import { Cards } from '@/components/Cards';
 
 export default function Home() {
   return (
@@ -48,11 +48,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="flex items-center gap-8">
-            <Card />
-            <Card />
-            <Card />
-          </div>
+          <Cards />
         </Section>
 
         <Section className="flex flex-col items-center text-center">

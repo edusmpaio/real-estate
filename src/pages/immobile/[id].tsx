@@ -1,4 +1,7 @@
+import { GetStaticPropsContext } from 'next';
 import Image from 'next/image';
+
+import { immobileData, Immobile } from '@/data/immobile';
 
 import { Footer } from '@/components/layout/Footer';
 import { Section } from '@/components/layout/Section';
@@ -7,18 +10,37 @@ import { Header } from '@/components/layout/Header';
 import { ProposalForm } from './components/ProposalForm';
 import { Armchair, Bathtub, Bed, MapPin, Ruler } from '@phosphor-icons/react';
 
-export default function ImmobileDetails() {
+interface ImmobileDetailsProps {
+  currentImmobile: Immobile;
+}
+
+export default function ImmobileDetails({
+  currentImmobile,
+}: ImmobileDetailsProps) {
+  const {
+    title,
+    image,
+    price,
+    location,
+    squareMeters,
+    bedrooms,
+    bathrooms,
+    isFurnished,
+    description,
+  } = currentImmobile;
+
   return (
     <>
       <Header linkedToHome />
       <Section className="mt-24">
-        <h1 className="font-title text-4xl mb-14">Apartamento Skyline</h1>
+        <h1 className="font-title text-4xl mb-14">{title}</h1>
         <div className="flex justify-between">
           <Image
-            src="/apartament.jpg"
+            src={image}
             alt="Foto do imóvel"
             width={720}
             height={426}
+            quality={100}
           />
 
           <div className="sticky top-0 self-start p-8 bg-white shadow-md max-w-xs">
@@ -32,27 +54,27 @@ export default function ImmobileDetails() {
           <div className="pb-9 border-b border-gray-300 mt-16 flex justify-around">
             <div className="flex gap-2 font-medium">
               <MapPin size={24} />
-              <span>Rio de Janeiro</span>
+              <span>{location}</span>
             </div>
 
             <div className="flex gap-2 font-medium">
               <Ruler size={24} />
-              <span>180m²</span>
+              <span>{squareMeters}m²</span>
             </div>
 
             <div className="flex gap-2 font-medium">
               <Bed size={24} />
-              <span>2 quartos</span>
+              <span>{bedrooms} quartos</span>
             </div>
 
             <div className="flex gap-2 font-medium">
               <Bathtub size={24} />
-              <span>2 banheiros</span>
+              <span>{bathrooms} banheiros</span>
             </div>
 
             <div className="flex gap-2 font-medium">
               <Armchair size={24} />
-              <span>Mobiliado</span>
+              <span>{isFurnished ? 'Mobiliado' : 'Sem mobilia'}</span>
             </div>
           </div>
 
@@ -61,7 +83,12 @@ export default function ImmobileDetails() {
               <span className="text-sm text-gray-500 block">
                 Valor do imóvel
               </span>
-              <strong className="text-2xl">R$ 800.000</strong>
+              <strong className="text-2xl">
+                {price.toLocaleString('pt-br', {
+                  style: 'currency',
+                  currency: 'BRL',
+                })}
+              </strong>
             </div>
 
             <a
@@ -74,19 +101,40 @@ export default function ImmobileDetails() {
 
           <div className="mt-16">
             <h3 className="font-bold text-xl mb-6">Descrição do imóvel</h3>
-            <p className="text-gray-500">
-              Com uma vista incrível para a cidade, este apartamento moderno
-              oferece um espaço amplo e elegante, com acabamentos de alta
-              qualidade. O apartamento conta com uma suíte master com closet, um
-              segundo quarto, banheiro social, cozinha americana integrada a
-              sala de estar e jantar, além de uma varanda com churrasqueira. O
-              condomínio dispõe de área de lazer completa com piscina, academia
-              e salão de festas.
-            </p>
+            <p className="text-gray-500">{description}</p>
           </div>
         </div>
       </Section>
       <Footer />
     </>
   );
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(
+  context: GetStaticPropsContext<{ id: string }>
+) {
+  const id = context.params?.id;
+
+  const currentImmobile = immobileData.find((immobile) => immobile.id === id);
+
+  if (!currentImmobile) {
+    return {
+      redirect: {
+        destination: '/',
+      },
+    };
+  }
+
+  return {
+    props: {
+      currentImmobile,
+    },
+  };
 }
