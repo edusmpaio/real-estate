@@ -31,6 +31,7 @@ export default function Home() {
           alt="Foto de uma casa moderna branca"
           width={400}
           height={600}
+          quality={100}
         />
       </Section>
 
