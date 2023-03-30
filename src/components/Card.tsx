@@ -1,6 +1,7 @@
 import { Immobile } from '@/data/immobile';
 import { Bed, MapPin, Ruler } from '@phosphor-icons/react';
 import Link from 'next/link';
+import { Button } from './Button';
 
 interface CardProps {
   immobile: Immobile;
@@ -41,9 +42,8 @@ export function Card({ immobile }: CardProps) {
               currency: 'BRL',
             })}
           </strong>
-          <button className="bg-gray-800 text-gray-100 py-3 px-6 font-medium hover:bg-gray-900 transition-colors text-sm">
-            Saiba mais
-          </button>
+
+          <Button primary>Saiba mais</Button>
         </div>
       </div>
     </Link>

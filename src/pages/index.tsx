@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 
 import { SearchFilter } from '@/components/SearchFilter';
 import { Cards } from '@/components/Cards';
+import { Button } from '@/components/Button';
 
 export default function Home() {
   return (
@@ -59,12 +60,13 @@ export default function Home() {
             Navegue pela nossa lista de imóveis disponíveis e encontre o lar que
             combina com você, seja para compra ou aluguel.
           </p>
-          <a
-            href="#"
-            className="bg-gray-100 text-gray-800 py-3 px-6 font-medium hover:bg-white transition-colors text-lg"
+
+          <Button
+            asChild
+            className="bg-gray-100 text-gray-800 hover:bg-white text-lg"
           >
-            Explorar imóveis
-          </a>
+            <a href="#">Explorar imóveis</a>
+          </Button>
         </Section>
         <div className="bg-gray-800 w-full h-[82.7%] absolute top-80 -z-10" />
       </div>

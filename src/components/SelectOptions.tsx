@@ -26,8 +26,8 @@ export function SelectOptions({ field }: SelectOptionProps) {
               <span
                 className={`${
                   selectedOption === placeholder
-                    ? 'text-gray-600'
-                    : 'text-gray-800'
+                    ? 'text-gray-500'
+                    : 'text-gray-800 font-medium'
                 }`}
               >
                 {selectedOption}

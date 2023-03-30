@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Eye, EyeSlash } from '@phosphor-icons/react';
+import { Button } from './Button';
 
 interface FormProps {
   isRegister?: boolean;
@@ -87,12 +88,9 @@ export function Form({ isRegister }: FormProps) {
         </>
       )}
 
-      <button
-        type="submit"
-        className="bg-gray-800 text-gray-100 w-full my-8 py-4 font-bold hover:bg-gray-900 transition-colors"
-      >
+      <Button primary type="submit" className="w-full my-8">
         {isRegister ? 'Cadastrar' : 'Entrar'}
-      </button>
+      </Button>
 
       {isRegister ? (
         <span className="text-gray-500">

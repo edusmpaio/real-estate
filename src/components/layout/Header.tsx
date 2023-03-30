@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Button } from '../Button';
+
 interface HeaderProps {
   linkedToHome?: boolean;
 }
@@ -42,12 +44,9 @@ export function Header({ linkedToHome }: HeaderProps) {
         </nav>
       </div>
 
-      <Link
-        href="/login"
-        className="bg-gray-800 text-gray-100 py-3 px-6 font-medium text-sm hover:bg-gray-900 transition-colors"
-      >
-        Fazer Login
-      </Link>
+      <Button asChild className="bg-gray-800 text-gray-100 hover:bg-gray-900">
+        <Link href="/login">Fazer Login</Link>
+      </Button>
     </header>
   );
 }

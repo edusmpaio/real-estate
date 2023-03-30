@@ -8,6 +8,7 @@ import {
 } from '@phosphor-icons/react';
 
 import { SelectOptions } from './SelectOptions';
+import { Button } from './Button';
 
 const searchFilterFields = [
   {
@@ -52,9 +53,7 @@ export function SearchFilter() {
         <SelectOptions key={field.id} field={field} />
       ))}
 
-      <button className="bg-gray-800 text-gray-100 py-3 px-6 font-medium hover:bg-gray-900 transition-colors text-sm">
-        Buscar
-      </button>
+      <Button primary>Buscar</Button>
     </form>
   );
 }

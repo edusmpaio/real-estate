@@ -6,9 +6,10 @@ import { immobileData, Immobile } from '@/data/immobile';
 import { Footer } from '@/components/layout/Footer';
 import { Section } from '@/components/layout/Section';
 import { Header } from '@/components/layout/Header';
+import { Button } from '@/components/Button';
 
-import { ProposalForm } from './components/ProposalForm';
 import { Armchair, Bathtub, Bed, MapPin, Ruler } from '@phosphor-icons/react';
+import { ProposalForm } from './components/_ProposalForm';
 
 interface ImmobileDetailsProps {
   currentImmobile: Immobile;
@@ -91,12 +92,9 @@ export default function ImmobileDetails({
               </strong>
             </div>
 
-            <a
-              href="#"
-              className="bg-gray-800 text-gray-100 py-3 px-6 font-medium hover:bg-gray-900 transition-colors text-sm"
-            >
-              Agendar visita
-            </a>
+            <Button asChild primary>
+              <a href="#">Agendar visita</a>
+            </Button>
           </div>
 
           <div className="mt-16">
