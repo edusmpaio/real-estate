@@ -78,6 +78,7 @@ export default function Home() {
           alt="Homem e mulher na empresa sentados olhando para a tela de um notebook"
           width={594}
           height={457}
+          quality={100}
         />
         <div>
           <h2 className="font-title text-4xl mb-6">Sobre a empresa</h2>
