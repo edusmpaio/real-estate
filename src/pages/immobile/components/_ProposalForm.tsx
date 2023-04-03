@@ -29,9 +29,7 @@ export default function ProposalForm() {
         className="resize-none w-full h-40 bg-gray-100 px-4 py-3 border border-gray-200 text-sm mb-8 placeholder:text-gray-500"
       />
 
-      <Button primary className="w-full">
-        Fazer proposta
-      </Button>
+      <Button className="w-full">Fazer proposta</Button>
     </form>
   );
 }

@@ -53,7 +53,7 @@ export function SearchFilter() {
         <SelectOptions key={field.id} field={field} />
       ))}
 
-      <Button primary>Buscar</Button>
+      <Button>Buscar</Button>
     </form>
   );
 }

@@ -100,7 +100,7 @@ export default function ImmobileDetails() {
               </strong>
             </div>
 
-            <Button asChild primary>
+            <Button asChild>
               <a href="#">Agendar visita</a>
             </Button>
           </div>

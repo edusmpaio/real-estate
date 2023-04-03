@@ -43,7 +43,7 @@ export function Card({ immobile }: CardProps) {
             })}
           </strong>
 
-          <Button primary>Saiba mais</Button>
+          <Button>Saiba mais</Button>
         </div>
       </div>
     </Link>

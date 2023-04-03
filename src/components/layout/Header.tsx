@@ -44,7 +44,7 @@ export function Header({ linkedToHome }: HeaderProps) {
         </nav>
       </div>
 
-      <Button asChild className="bg-gray-800 text-gray-100 hover:bg-gray-900">
+      <Button asChild>
         <Link href="/login">Fazer Login</Link>
       </Button>
     </header>

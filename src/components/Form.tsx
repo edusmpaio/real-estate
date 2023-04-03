@@ -149,7 +149,7 @@ export function Form({ isRegister }: FormProps) {
         </>
       )}
 
-      <Button primary type="submit" className="w-full my-8">
+      <Button type="submit" className="w-full my-8">
         {isRegister ? 'Cadastrar' : 'Entrar'}
       </Button>
 

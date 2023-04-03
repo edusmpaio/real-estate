@@ -62,10 +62,7 @@ export default function Home() {
             combina com você, seja para compra ou aluguel.
           </p>
 
-          <Button
-            asChild
-            className="bg-gray-100 text-gray-800 hover:bg-white text-lg"
-          >
+          <Button asChild variant="white" className="text-lg">
             <a href="#">Explorar imóveis</a>
           </Button>
         </Section>
