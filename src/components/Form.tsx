@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import { useForm } from 'react-hook-form';
@@ -42,8 +41,6 @@ export function Form({ isRegister }: FormProps) {
   } = useForm<LoginFormInputsType>({
     resolver: zodResolver(loginFormSchema),
   });
-
-  const router = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
